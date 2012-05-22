@@ -8,7 +8,7 @@ public class QuickCopy {
 		
 		GUI guiObject = new GUI();
 		guiObject.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		guiObject.setSize(500,500);
+		guiObject.setSize(500,300);
 		guiObject.setVisible(true);
 		
 	}
