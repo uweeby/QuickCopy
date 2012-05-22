@@ -11,7 +11,7 @@ public class Save{
 		filename = file;
 	}
 	
-	public void SaveMethod() {
+	public void toFile() {
 		try{
             // Create file
             FileWriter fstream = new FileWriter(filename);
@@ -41,10 +41,5 @@ public class Save{
 		//Take in the JTextField string and set it to a local array
 		SaveArray[i] = field;
 		//System.out.println(SaveArray[1]);
-	}
-	
-	public void setFieldPath(String filepath) {
-		//Take in the filename to save the file from the main class
-		filename = filepath;
 	}
 }
