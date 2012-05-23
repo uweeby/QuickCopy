@@ -4,25 +4,16 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
 public class Load {
-	private int TotalFields = 6;
-	private String[] FieldArray = new String[TotalFields];
-	private String filename;
+	private String[] FieldArray = new String[QuickCopy.TotalFields];
 	
-	public Load (String file) {
-		//Take in the filename to load from the main class
-		filename = file;
-	}
-	
-	public void LoadMethod() {
-		
-	       
+	public void LoadMethod() { 
         try{
             // Open template file
-            FileInputStream fstream = new FileInputStream(filename);
+            FileInputStream fstream = new FileInputStream(QuickCopy.filename);
             DataInputStream in = new DataInputStream(fstream);
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
            
-            for (int i=0; i < TotalFields; i++) {
+            for (int i=0; i < QuickCopy.TotalFields; i++) {
                 FieldArray[i] = br.readLine();  
             }
            

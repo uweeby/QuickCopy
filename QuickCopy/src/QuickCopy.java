@@ -3,6 +3,7 @@ import javax.swing.JFrame;
 public class QuickCopy {
 	
 	public static String filename = "template.txt";
+	public static int TotalFields = 6;
 	
 	public static void main(String[] args) {
 		
