@@ -1,5 +1,18 @@
 Quick Copy
+==========
+Helpdesk tool to quickly access common ticket notes.
 
-Tools Used: NetBeans/Java (File IO, Clipboard Control)
+Bugs/Suggestions: uweenukr@gmail.com
 
-Overview: Tool used while working at Help Desk. Many times the same ticket will be created doing the same task multiple times. This tool holds a template of common ticket notes to be quickly pasted. Save time and typing time!
+
+Tools
+-----
+Written in Eclipse using 100% java.
+
+
+Version 1.0
+-----------
+* Keeping track of version
+* Rewrote GUI by hand (NetBeans window builder was messy)
+* Simplified code base a bit
+
