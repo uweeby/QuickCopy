@@ -1,8 +1,10 @@
 import java.awt.*;
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class GUI extends JFrame {
 	
+	//Variable Declaration
 	private final JTextField textfield1;
 	private final JTextField textfield2;
 	private final JTextField textfield3;
@@ -20,11 +22,12 @@ public class GUI extends JFrame {
 	
 	public JTextField[] fieldarray = new JTextField[QuickCopy.TotalFields];
 	
+	//Constructor for GUI
 	public GUI() {
-		//GUi Constructor
-		super("Quick Copy"); //Window Title
+		super("Quick Copy");
 		setLayout(new FlowLayout());
 		
+		//Load the template file when application starts
         Load load = new Load();
         load.LoadMethod();
 		
@@ -83,20 +86,21 @@ public class GUI extends JFrame {
 		
 	}
 	
+	//Event Handler for Copy button.
 	public void copyevent(JButton button, final JTextField field) {
 		button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	//Create clipboard object and paste the value of the TextField
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+            	//Create clipboard object and use the value of the TextField as a parameter
         		ToClipboard toclipboard = new ToClipboard();
         		toclipboard.copyfrom(field.getText());
             }
         });
 	}
 	
+	//Event Handler for Save Button
 	public void saveEvent(){
 		savebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //What to do when save button is selected:
             	//Save the current values of all text fields to a file.
         	    Save save = new Save();
         	    
